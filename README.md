@@ -3,6 +3,7 @@
 Classifying ADHD vs. healthy children from resting-state EEG using handcrafted spectral and statistical features with classical machine learning.
 
 A subject-level analysis on the IEEE 19-channel ADHD EEG dataset (Nasrabadi et al., 2020), implemented with `scipy`, `scikit-learn`, and `pandas`.
+
 **[→ View the interactive research showcase](https://evasafi.github.io/adhd-eeg-classification/)**
 ---
 
