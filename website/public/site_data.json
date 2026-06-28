@@ -1,0 +1,898 @@
+{
+  "dataset": {
+    "name": "IEEE 19-Channel EEG Dataset (Nasrabadi et al., 2020)",
+    "total_subjects": 121,
+    "adhd_subjects": 61,
+    "control_subjects": 60,
+    "sampling_rate_hz": 128,
+    "n_channels": 19,
+    "channels": [
+      "Fp1",
+      "Fp2",
+      "F3",
+      "F4",
+      "C3",
+      "C4",
+      "P3",
+      "P4",
+      "O1",
+      "O2",
+      "F7",
+      "F8",
+      "T7",
+      "T8",
+      "P7",
+      "P8",
+      "Fz",
+      "Cz",
+      "Pz"
+    ],
+    "age_range": "7\u201312 years",
+    "total_features": 171,
+    "feature_breakdown": {
+      "band_power": 76,
+      "tbr": 19,
+      "statistical": 76
+    }
+  },
+  "model_results": {
+    "Random Forest": {
+      "accuracy_mean": 0.686,
+      "accuracy_std": 0.04177452706029251,
+      "f1_mean": 0.6998540080609047,
+      "f1_std": 0.05251656328612754,
+      "roc_auc_mean": 0.753525641025641,
+      "roc_auc_std": 0.04765556092838109
+    },
+    "SVM (RBF)": {
+      "accuracy_mean": 0.6536666666666666,
+      "accuracy_std": 0.0619892463792444,
+      "f1_mean": 0.6505994694960213,
+      "f1_std": 0.0393630291617174,
+      "roc_auc_mean": 0.6825854700854702,
+      "roc_auc_std": 0.08495665767895909
+    }
+  },
+  "roc_curves": {
+    "Random Forest": {
+      "fpr": [
+        0.0,
+        0.0,
+        0.0,
+        0.016666666666666666,
+        0.016666666666666666,
+        0.03333333333333333,
+        0.03333333333333333,
+        0.05,
+        0.05,
+        0.06666666666666667,
+        0.06666666666666667,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.11666666666666667,
+        0.11666666666666667,
+        0.13333333333333333,
+        0.13333333333333333,
+        0.15,
+        0.15,
+        0.21666666666666667,
+        0.21666666666666667,
+        0.23333333333333334,
+        0.23333333333333334,
+        0.25,
+        0.25,
+        0.26666666666666666,
+        0.26666666666666666,
+        0.31666666666666665,
+        0.31666666666666665,
+        0.3333333333333333,
+        0.3333333333333333,
+        0.35,
+        0.35,
+        0.4,
+        0.4,
+        0.43333333333333335,
+        0.43333333333333335,
+        0.45,
+        0.45,
+        0.4666666666666667,
+        0.4666666666666667,
+        0.48333333333333334,
+        0.48333333333333334,
+        0.5,
+        0.5,
+        0.55,
+        0.55,
+        0.5666666666666667,
+        0.5666666666666667,
+        0.6166666666666667,
+        0.6166666666666667,
+        0.7166666666666667,
+        0.7166666666666667,
+        0.7666666666666667,
+        0.7666666666666667,
+        1.0
+      ],
+      "tpr": [
+        0.0,
+        0.01639344262295082,
+        0.04918032786885246,
+        0.04918032786885246,
+        0.08196721311475409,
+        0.08196721311475409,
+        0.18032786885245902,
+        0.18032786885245902,
+        0.21311475409836064,
+        0.21311475409836064,
+        0.2786885245901639,
+        0.2786885245901639,
+        0.29508196721311475,
+        0.29508196721311475,
+        0.3114754098360656,
+        0.3114754098360656,
+        0.36065573770491804,
+        0.36065573770491804,
+        0.4098360655737705,
+        0.4098360655737705,
+        0.4426229508196721,
+        0.4426229508196721,
+        0.5081967213114754,
+        0.5081967213114754,
+        0.5737704918032787,
+        0.5737704918032787,
+        0.5901639344262295,
+        0.5901639344262295,
+        0.6229508196721312,
+        0.6229508196721312,
+        0.6721311475409836,
+        0.6721311475409836,
+        0.7377049180327869,
+        0.7377049180327869,
+        0.7540983606557377,
+        0.7540983606557377,
+        0.7704918032786885,
+        0.7704918032786885,
+        0.819672131147541,
+        0.819672131147541,
+        0.8360655737704918,
+        0.8360655737704918,
+        0.8688524590163934,
+        0.8688524590163934,
+        0.9016393442622951,
+        0.9016393442622951,
+        0.9180327868852459,
+        0.9180327868852459,
+        0.9344262295081968,
+        0.9344262295081968,
+        0.9508196721311475,
+        0.9508196721311475,
+        0.9836065573770492,
+        0.9836065573770492,
+        1.0,
+        1.0
+      ],
+      "auc": 0.7399
+    },
+    "SVM (RBF)": {
+      "fpr": [
+        0.0,
+        0.016666666666666666,
+        0.016666666666666666,
+        0.03333333333333333,
+        0.03333333333333333,
+        0.05,
+        0.05,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.1,
+        0.1,
+        0.11666666666666667,
+        0.11666666666666667,
+        0.15,
+        0.15,
+        0.18333333333333332,
+        0.18333333333333332,
+        0.21666666666666667,
+        0.21666666666666667,
+        0.23333333333333334,
+        0.23333333333333334,
+        0.25,
+        0.25,
+        0.26666666666666666,
+        0.26666666666666666,
+        0.2833333333333333,
+        0.2833333333333333,
+        0.3,
+        0.3,
+        0.31666666666666665,
+        0.31666666666666665,
+        0.3333333333333333,
+        0.35,
+        0.38333333333333336,
+        0.38333333333333336,
+        0.4166666666666667,
+        0.4166666666666667,
+        0.43333333333333335,
+        0.43333333333333335,
+        0.45,
+        0.45,
+        0.48333333333333334,
+        0.48333333333333334,
+        0.5166666666666667,
+        0.5166666666666667,
+        0.5833333333333334,
+        0.5833333333333334,
+        0.6166666666666667,
+        0.6166666666666667,
+        0.7833333333333333,
+        0.7833333333333333,
+        0.8333333333333334,
+        0.8333333333333334,
+        0.8833333333333333,
+        0.8833333333333333,
+        0.95,
+        0.95,
+        0.9666666666666667,
+        0.9666666666666667,
+        1.0
+      ],
+      "tpr": [
+        0.0,
+        0.0,
+        0.01639344262295082,
+        0.01639344262295082,
+        0.03278688524590164,
+        0.03278688524590164,
+        0.04918032786885246,
+        0.04918032786885246,
+        0.09836065573770492,
+        0.09836065573770492,
+        0.18032786885245902,
+        0.18032786885245902,
+        0.22950819672131148,
+        0.22950819672131148,
+        0.2786885245901639,
+        0.2786885245901639,
+        0.32786885245901637,
+        0.32786885245901637,
+        0.3770491803278688,
+        0.3770491803278688,
+        0.4098360655737705,
+        0.4098360655737705,
+        0.5081967213114754,
+        0.5081967213114754,
+        0.5409836065573771,
+        0.5409836065573771,
+        0.5573770491803278,
+        0.5573770491803278,
+        0.6065573770491803,
+        0.6065573770491803,
+        0.6229508196721312,
+        0.6229508196721312,
+        0.6557377049180327,
+        0.6557377049180327,
+        0.6721311475409836,
+        0.6721311475409836,
+        0.7049180327868853,
+        0.7049180327868853,
+        0.7213114754098361,
+        0.7213114754098361,
+        0.7540983606557377,
+        0.7540983606557377,
+        0.8032786885245902,
+        0.8032786885245902,
+        0.819672131147541,
+        0.819672131147541,
+        0.8852459016393442,
+        0.8852459016393442,
+        0.9180327868852459,
+        0.9180327868852459,
+        0.9344262295081968,
+        0.9344262295081968,
+        0.9508196721311475,
+        0.9508196721311475,
+        0.9672131147540983,
+        0.9672131147540983,
+        0.9836065573770492,
+        0.9836065573770492,
+        1.0,
+        1.0
+      ],
+      "auc": 0.6716
+    }
+  },
+  "confusion_matrices": {
+    "Random Forest": {
+      "TN": 38,
+      "FP": 22,
+      "FN": 16,
+      "TP": 45,
+      "matrix": [
+        [
+          38,
+          22
+        ],
+        [
+          16,
+          45
+        ]
+      ]
+    },
+    "SVM (RBF)": {
+      "TN": 40,
+      "FP": 20,
+      "FN": 22,
+      "TP": 39,
+      "matrix": [
+        [
+          40,
+          20
+        ],
+        [
+          22,
+          39
+        ]
+      ]
+    }
+  },
+  "feature_importance": [
+    {
+      "feature": "Var_P7",
+      "importance": 0.040102,
+      "type": "Statistical"
+    },
+    {
+      "feature": "Var_P3",
+      "importance": 0.023514,
+      "type": "Statistical"
+    },
+    {
+      "feature": "TBR_Pz",
+      "importance": 0.021425,
+      "type": "Theta/Beta Ratio"
+    },
+    {
+      "feature": "Alpha_Cz",
+      "importance": 0.021394,
+      "type": "Alpha"
+    },
+    {
+      "feature": "Var_T7",
+      "importance": 0.018076,
+      "type": "Statistical"
+    },
+    {
+      "feature": "Var_Pz",
+      "importance": 0.017756,
+      "type": "Statistical"
+    },
+    {
+      "feature": "Beta_Cz",
+      "importance": 0.017342,
+      "type": "Beta"
+    },
+    {
+      "feature": "Beta_F4",
+      "importance": 0.015736,
+      "type": "Beta"
+    },
+    {
+      "feature": "Var_F7",
+      "importance": 0.01488,
+      "type": "Statistical"
+    },
+    {
+      "feature": "Var_O2",
+      "importance": 0.014862,
+      "type": "Statistical"
+    },
+    {
+      "feature": "Var_Fz",
+      "importance": 0.014379,
+      "type": "Statistical"
+    },
+    {
+      "feature": "TBR_T7",
+      "importance": 0.013673,
+      "type": "Theta/Beta Ratio"
+    },
+    {
+      "feature": "Kurt_P7",
+      "importance": 0.011755,
+      "type": "Statistical"
+    },
+    {
+      "feature": "Alpha_P3",
+      "importance": 0.011509,
+      "type": "Alpha"
+    },
+    {
+      "feature": "Var_C3",
+      "importance": 0.01133,
+      "type": "Statistical"
+    },
+    {
+      "feature": "Beta_C3",
+      "importance": 0.010873,
+      "type": "Beta"
+    },
+    {
+      "feature": "Delta_P7",
+      "importance": 0.010346,
+      "type": "Delta"
+    },
+    {
+      "feature": "Beta_Fp2",
+      "importance": 0.009991,
+      "type": "Beta"
+    },
+    {
+      "feature": "Alpha_F4",
+      "importance": 0.00994,
+      "type": "Alpha"
+    },
+    {
+      "feature": "Theta_Cz",
+      "importance": 0.009619,
+      "type": "Theta"
+    }
+  ],
+  "shap_summary": [
+    {
+      "feature": "Var_P7",
+      "mean_abs_shap": 0.030495,
+      "type": "Statistical"
+    },
+    {
+      "feature": "Var_P3",
+      "mean_abs_shap": 0.013847,
+      "type": "Statistical"
+    },
+    {
+      "feature": "Var_Pz",
+      "mean_abs_shap": 0.012951,
+      "type": "Statistical"
+    },
+    {
+      "feature": "Alpha_Cz",
+      "mean_abs_shap": 0.012414,
+      "type": "Alpha"
+    },
+    {
+      "feature": "Var_O2",
+      "mean_abs_shap": 0.012412,
+      "type": "Statistical"
+    },
+    {
+      "feature": "Var_T7",
+      "mean_abs_shap": 0.011993,
+      "type": "Statistical"
+    },
+    {
+      "feature": "TBR_Pz",
+      "mean_abs_shap": 0.010758,
+      "type": "Theta/Beta Ratio"
+    },
+    {
+      "feature": "Beta_F4",
+      "mean_abs_shap": 0.009574,
+      "type": "Beta"
+    },
+    {
+      "feature": "Var_F7",
+      "mean_abs_shap": 0.009506,
+      "type": "Statistical"
+    },
+    {
+      "feature": "Beta_Cz",
+      "mean_abs_shap": 0.009409,
+      "type": "Beta"
+    },
+    {
+      "feature": "Var_Fz",
+      "mean_abs_shap": 0.008972,
+      "type": "Statistical"
+    },
+    {
+      "feature": "Alpha_P3",
+      "mean_abs_shap": 0.008459,
+      "type": "Alpha"
+    },
+    {
+      "feature": "Var_C3",
+      "mean_abs_shap": 0.007732,
+      "type": "Statistical"
+    },
+    {
+      "feature": "TBR_T7",
+      "mean_abs_shap": 0.006772,
+      "type": "Theta/Beta Ratio"
+    },
+    {
+      "feature": "Delta_P7",
+      "mean_abs_shap": 0.006733,
+      "type": "Delta"
+    },
+    {
+      "feature": "Beta_C3",
+      "mean_abs_shap": 0.006671,
+      "type": "Beta"
+    },
+    {
+      "feature": "Kurt_P7",
+      "mean_abs_shap": 0.006489,
+      "type": "Statistical"
+    },
+    {
+      "feature": "Skew_F3",
+      "mean_abs_shap": 0.00639,
+      "type": "Statistical"
+    },
+    {
+      "feature": "Beta_Fp2",
+      "mean_abs_shap": 0.006333,
+      "type": "Beta"
+    },
+    {
+      "feature": "Alpha_C3",
+      "mean_abs_shap": 0.005714,
+      "type": "Alpha"
+    }
+  ],
+  "shap_waterfall": {
+    "ADHD": {
+      "label": "ADHD",
+      "predicted_prob": 0.8117,
+      "base_value": 0.504,
+      "features": [
+        {
+          "feature": "Var_P7",
+          "shap_value": 0.025067,
+          "feature_value": -0.5075,
+          "type": "Statistical"
+        },
+        {
+          "feature": "Var_T7",
+          "shap_value": 0.023866,
+          "feature_value": -0.7293,
+          "type": "Statistical"
+        },
+        {
+          "feature": "Var_C3",
+          "shap_value": 0.017072,
+          "feature_value": -0.5299,
+          "type": "Statistical"
+        },
+        {
+          "feature": "Var_F7",
+          "shap_value": 0.014856,
+          "feature_value": -0.5372,
+          "type": "Statistical"
+        },
+        {
+          "feature": "Alpha_Cz",
+          "shap_value": 0.013866,
+          "feature_value": -0.192,
+          "type": "Alpha"
+        },
+        {
+          "feature": "Beta_F4",
+          "shap_value": 0.013607,
+          "feature_value": 0.0235,
+          "type": "Beta"
+        },
+        {
+          "feature": "Var_Fz",
+          "shap_value": 0.012579,
+          "feature_value": -0.4302,
+          "type": "Statistical"
+        },
+        {
+          "feature": "Beta_Cz",
+          "shap_value": 0.011304,
+          "feature_value": 0.0373,
+          "type": "Beta"
+        },
+        {
+          "feature": "Beta_C3",
+          "shap_value": 0.008977,
+          "feature_value": -0.0183,
+          "type": "Beta"
+        },
+        {
+          "feature": "Var_Pz",
+          "shap_value": -0.007985,
+          "feature_value": -0.2689,
+          "type": "Statistical"
+        },
+        {
+          "feature": "TBR_T7",
+          "shap_value": 0.00782,
+          "feature_value": -0.7359,
+          "type": "Theta/Beta Ratio"
+        },
+        {
+          "feature": "Theta_C4",
+          "shap_value": 0.007738,
+          "feature_value": -0.2044,
+          "type": "Theta"
+        },
+        {
+          "feature": "TBR_Pz",
+          "shap_value": 0.007615,
+          "feature_value": -0.693,
+          "type": "Theta/Beta Ratio"
+        },
+        {
+          "feature": "TBR_P7",
+          "shap_value": 0.007459,
+          "feature_value": -0.5491,
+          "type": "Theta/Beta Ratio"
+        },
+        {
+          "feature": "Var_O2",
+          "shap_value": -0.007375,
+          "feature_value": -0.2682,
+          "type": "Statistical"
+        }
+      ]
+    },
+    "Control": {
+      "label": "Control",
+      "predicted_prob": 0.1833,
+      "base_value": 0.504,
+      "features": [
+        {
+          "feature": "Alpha_P3",
+          "shap_value": -0.026643,
+          "feature_value": -0.8195,
+          "type": "Alpha"
+        },
+        {
+          "feature": "Var_P7",
+          "shap_value": 0.024026,
+          "feature_value": -0.564,
+          "type": "Statistical"
+        },
+        {
+          "feature": "Beta_F4",
+          "shap_value": -0.021027,
+          "feature_value": -0.5874,
+          "type": "Beta"
+        },
+        {
+          "feature": "Beta_C3",
+          "shap_value": -0.019343,
+          "feature_value": -0.6267,
+          "type": "Beta"
+        },
+        {
+          "feature": "Alpha_Cz",
+          "shap_value": -0.018751,
+          "feature_value": -0.6215,
+          "type": "Alpha"
+        },
+        {
+          "feature": "Alpha_C3",
+          "shap_value": -0.015498,
+          "feature_value": -0.7496,
+          "type": "Alpha"
+        },
+        {
+          "feature": "Alpha_Fz",
+          "shap_value": -0.014769,
+          "feature_value": -0.845,
+          "type": "Alpha"
+        },
+        {
+          "feature": "Theta_Fz",
+          "shap_value": -0.013705,
+          "feature_value": -0.8097,
+          "type": "Theta"
+        },
+        {
+          "feature": "Kurt_Fz",
+          "shap_value": -0.013282,
+          "feature_value": -0.5528,
+          "type": "Statistical"
+        },
+        {
+          "feature": "Beta_Fp2",
+          "shap_value": -0.012785,
+          "feature_value": -0.7373,
+          "type": "Beta"
+        },
+        {
+          "feature": "Var_O2",
+          "shap_value": -0.011589,
+          "feature_value": -0.2681,
+          "type": "Statistical"
+        },
+        {
+          "feature": "Var_T7",
+          "shap_value": -0.01124,
+          "feature_value": -0.379,
+          "type": "Statistical"
+        },
+        {
+          "feature": "Var_P3",
+          "shap_value": 0.0106,
+          "feature_value": -0.5873,
+          "type": "Statistical"
+        },
+        {
+          "feature": "Beta_P3",
+          "shap_value": -0.010305,
+          "feature_value": -0.3353,
+          "type": "Beta"
+        },
+        {
+          "feature": "Alpha_F8",
+          "shap_value": -0.00983,
+          "feature_value": -0.6686,
+          "type": "Alpha"
+        }
+      ]
+    }
+  },
+  "shap_per_channel": [
+    {
+      "channel": "Fp1",
+      "mean_abs_shap": 0.001598
+    },
+    {
+      "channel": "Fp2",
+      "mean_abs_shap": 0.002033
+    },
+    {
+      "channel": "F3",
+      "mean_abs_shap": 0.003182
+    },
+    {
+      "channel": "F4",
+      "mean_abs_shap": 0.002956
+    },
+    {
+      "channel": "C3",
+      "mean_abs_shap": 0.003486
+    },
+    {
+      "channel": "C4",
+      "mean_abs_shap": 0.00189
+    },
+    {
+      "channel": "P3",
+      "mean_abs_shap": 0.003966
+    },
+    {
+      "channel": "P4",
+      "mean_abs_shap": 0.001714
+    },
+    {
+      "channel": "O1",
+      "mean_abs_shap": 0.002593
+    },
+    {
+      "channel": "O2",
+      "mean_abs_shap": 0.002847
+    },
+    {
+      "channel": "F7",
+      "mean_abs_shap": 0.002565
+    },
+    {
+      "channel": "F8",
+      "mean_abs_shap": 0.002198
+    },
+    {
+      "channel": "T7",
+      "mean_abs_shap": 0.003167
+    },
+    {
+      "channel": "T8",
+      "mean_abs_shap": 0.001732
+    },
+    {
+      "channel": "P7",
+      "mean_abs_shap": 0.006401
+    },
+    {
+      "channel": "P8",
+      "mean_abs_shap": 0.002068
+    },
+    {
+      "channel": "Fz",
+      "mean_abs_shap": 0.003616
+    },
+    {
+      "channel": "Cz",
+      "mean_abs_shap": 0.00432
+    },
+    {
+      "channel": "Pz",
+      "mean_abs_shap": 0.004698
+    }
+  ],
+  "band_power": {
+    "ADHD": {
+      "Delta": {
+        "mean": 21061.911107,
+        "std": 13030.749509
+      },
+      "Theta": {
+        "mean": 5454.421586,
+        "std": 2195.536594
+      },
+      "Alpha": {
+        "mean": 2257.618715,
+        "std": 1183.404355
+      },
+      "Beta": {
+        "mean": 2334.59323,
+        "std": 1135.595236
+      },
+      "TBR": {
+        "mean": 2.681846,
+        "std": 0.889123
+      }
+    },
+    "Control": {
+      "Delta": {
+        "mean": 34257.869248,
+        "std": 38880.366957
+      },
+      "Theta": {
+        "mean": 6690.203298,
+        "std": 5539.475681
+      },
+      "Alpha": {
+        "mean": 2360.390779,
+        "std": 2151.076903
+      },
+      "Beta": {
+        "mean": 2457.515617,
+        "std": 2622.25877
+      },
+      "TBR": {
+        "mean": 3.329457,
+        "std": 1.427361
+      }
+    }
+  },
+  "frequency_bands": {
+    "Delta": {
+      "low": 1,
+      "high": 4
+    },
+    "Theta": {
+      "low": 4,
+      "high": 8
+    },
+    "Alpha": {
+      "low": 8,
+      "high": 12
+    },
+    "Beta": {
+      "low": 12,
+      "high": 30
+    }
+  },
+  "plots": {
+    "dataset_overview": "plots/01_dataset_overview.png",
+    "raw_eeg_adhd": "plots/02_raw_eeg_adhd.png",
+    "raw_eeg_control": "plots/02_raw_eeg_control.png",
+    "psd_comparison": "plots/03_psd_comparison.png",
+    "band_power_boxplots": "plots/04_band_power_boxplots.png",
+    "feature_distributions": "plots/05_feature_distributions.png",
+    "correlation_heatmap": "plots/06_correlation_heatmap.png",
+    "confusion_roc": "plots/07_confusion_roc.png",
+    "roc_combined": "plots/07b_roc_combined.png",
+    "feature_importance": "plots/08_feature_importance.png",
+    "shap_summary": "plots/09_shap_summary.png",
+    "shap_waterfall_adhd": "plots/10_shap_waterfall_adhd.png",
+    "shap_waterfall_control": "plots/10_shap_waterfall_control.png",
+    "topomap_theta": "plots/11_topomap_theta.png",
+    "topomap_tbr": "plots/11_topomap_tbr.png",
+    "topomap_shap": "plots/11_topomap_shap.png"
+  }
+}

@@ -1,5 +1,7 @@
 data/
-   __pycache__/
-   .ipynb_checkpoints/
-   *.pyc
-   .env
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+.env
+website/node_modules/
+website/dist/
