@@ -93,27 +93,19 @@ The mean TBR (averaged across all channels) was actually **higher in the Control
 
 ## Project Structure
 
-​```
+```
 adhd-eeg-classification/
 ├── data/
 │   └── adhdata.csv                  # Download from Kaggle (not committed)
 ├── notebooks/
-<<<<<<< HEAD
 │   ├── 01_eda.ipynb                 # Exploratory data analysis
 │   ├── 02_feature_extraction.ipynb  # Feature engineering (produces features.csv)
 │   ├── 03_classification.ipynb      # Model training and evaluation
 │   └── 04_xai.ipynb                 # SHAP explainability and site data export
 ├── website/                         # React research showcase site
-=======
-│   ├── 01_eda.ipynb                # Exploratory data analysis
-│   ├── 02_feature_extraction.ipynb # Feature engineering (produces features.csv)
-│   ├── 03_classification.ipynb     # Model training and evaluation
-│   └── 04_xai.ipynb                # SHAP explainability and site data export
-├── website/                        # React research showcase site
->>>>>>> 4082ceb71d7ac40a3822599e96dfef71e5786873
 ├── requirements.txt
 └── README.md
-​```
+```
 
 ---
 
