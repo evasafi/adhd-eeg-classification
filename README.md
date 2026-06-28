@@ -13,7 +13,7 @@ Attention Deficit Hyperactivity Disorder (ADHD) is one of the most common neurod
 
 Two findings from the literature motivate this project:
 
-1. **The theta/beta ratio (TBR)** has historically been proposed as an ADHD biomarker - elevated theta and reduced beta activity over frontal-central regions.
+1. **The theta/beta ratio (TBR)** has historically been proposed as an ADHD biomarker; elevated theta and reduced beta activity over frontal-central regions.
 2. **Multi-feature ML approaches** consistently outperform any single biomarker, suggesting ADHD-related EEG signatures are distributed across bands and channels.
 
 This project builds a clean, end-to-end pipeline to test these ideas on a public benchmark dataset.
