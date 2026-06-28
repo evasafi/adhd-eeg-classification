@@ -4,6 +4,7 @@ Classifying ADHD vs. healthy children from resting-state EEG using handcrafted s
 
 A subject-level analysis on the IEEE 19-channel ADHD EEG dataset (Nasrabadi et al., 2020), implemented with `scipy`, `scikit-learn`, and `pandas`.
 
+**[→ View the interactive research showcase](https://evasafi.github.io/adhd-eeg-classification/)**
 ---
 
 ## Background
@@ -12,7 +13,7 @@ Attention Deficit Hyperactivity Disorder (ADHD) is one of the most common neurod
 
 Two findings from the literature motivate this project:
 
-1. **The theta/beta ratio (TBR)** has historically been proposed as an ADHD biomarker — elevated theta and reduced beta activity over frontal-central regions.
+1. **The theta/beta ratio (TBR)** has historically been proposed as an ADHD biomarker; elevated theta and reduced beta activity over frontal-central regions.
 2. **Multi-feature ML approaches** consistently outperform any single biomarker, suggesting ADHD-related EEG signatures are distributed across bands and channels.
 
 This project builds a clean, end-to-end pipeline to test these ideas on a public benchmark dataset.
@@ -21,7 +22,7 @@ This project builds a clean, end-to-end pipeline to test these ideas on a public
 
 ## Dataset
 
-**IEEE EEG Data for ADHD / Control Children** (Nasrabadi et al., 2020) — [IEEE DataPort](https://ieee-dataport.org/open-access/eeg-data-adhd-control-children) | [Kaggle mirror](https://www.kaggle.com/datasets/danizo/eeg-dataset-for-adhd)
+**IEEE EEG Data for ADHD / Control Children** (Nasrabadi et al., 2020) - [IEEE DataPort](https://ieee-dataport.org/open-access/eeg-data-adhd-control-children) | [Kaggle mirror](https://www.kaggle.com/datasets/danizo/eeg-dataset-for-adhd)
 
 | Property | Value |
 |---|---|
@@ -40,7 +41,7 @@ ADHD subjects were diagnosed by an experienced psychiatrist according to DSM-IV 
 
 ### 1. Exploratory Data Analysis (`01_eda.ipynb`)
 - Class balance and recording duration analysis
-- Raw EEG signal inspection — ADHD signals appear noisier/more irregular than Control
+- Raw EEG signal inspection; ADHD signals appear noisier/more irregular than Control
 - Power Spectral Density (PSD) comparison using Welch's method
 - Group-level band power comparison across all 121 subjects
 
@@ -72,19 +73,19 @@ Band power computed using Welch's method (`nperseg=256`), which is more stable t
 | **Random Forest** | **0.686 ± 0.042** | **0.700 ± 0.053** | **0.754 ± 0.048** |
 | SVM (RBF) | 0.654 ± 0.062 | 0.651 ± 0.039 | 0.683 ± 0.085 |
 
-Random Forest outperforms SVM across all three metrics. The AUC of 0.75 indicates moderate but meaningful separability — well above chance (0.5), but lower than the ~85–95% accuracy figures sometimes reported in the literature. Those higher numbers typically rely on segmenting recordings into thousands of short windows (which inflates sample count and risks within-subject leakage); the evaluation here is subject-level, which is the honest and clinically meaningful benchmark.
+Random Forest outperforms SVM across all three metrics. The AUC of 0.75 indicates moderate but meaningful separability which is well above chance (0.5), but lower than the ~85–95% accuracy figures sometimes reported in the literature. Those higher numbers typically rely on segmenting recordings into thousands of short windows (which inflates sample count and risks within-subject leakage); the evaluation here is subject-level, which is the honest and clinically meaningful benchmark.
 
 ### Most important features (Random Forest)
 
 The top 20 features were dominated by:
-- **Signal variance over parietal/temporal regions** — `Var_P7`, `Var_P3`, `Var_T7`, `Var_Pz`, `Var_F7`, `Var_O2`, `Var_Fz` — the strongest single signal in the data
-- **Theta/Beta Ratio at the parietal midline** (`TBR_Pz`) — ranked #3, supporting the clinical biomarker hypothesis at a posterior site rather than the more commonly studied frontal-central one
-- **Alpha activity over central midline** (`Alpha_Cz`) — ranked #4
+- **Signal variance over parietal/temporal regions** - `Var_P7`, `Var_P3`, `Var_T7`, `Var_Pz`, `Var_F7`, `Var_O2`, `Var_Fz` - the strongest single signal in the data
+- **Theta/Beta Ratio at the parietal midline** (`TBR_Pz`) - ranked #3, supporting the clinical biomarker hypothesis at a posterior site rather than the more commonly studied frontal-central one
+- **Alpha activity over central midline** (`Alpha_Cz`) - ranked #4
 - **Beta band activity** across central and frontal regions (`Beta_Cz`, `Beta_F4`, `Beta_C3`, `Beta_Fp2`)
 
 The takeaway: ADHD-related EEG differences in this dataset are **distributed across signal-variability and spectral features**, not localized to one band or biomarker. Models built around a single feature (such as raw theta/beta ratio) under-perform multi-feature models, which is consistent with the literature.
 
-### Theta/Beta ratio — a note on the conventional biomarker
+### Theta/Beta ratio: the conventional biomarker
 
 The mean TBR (averaged across all channels) was actually **higher in the Control group (2.99)** than in ADHD (2.54) in this dataset. This is opposite to the classical "elevated TBR in ADHD" finding, but it is consistent with several recent studies questioning TBR as a standalone diagnostic. TBR still contributed predictive value when used per-channel (especially at Pz), but it is not a clean separator on its own. This motivated the multi-feature approach used here.
 
@@ -92,19 +93,27 @@ The mean TBR (averaged across all channels) was actually **higher in the Control
 
 ## Project Structure
 
-```
+​```
 adhd-eeg-classification/
 ├── data/
 │   └── adhdata.csv                  # Download from Kaggle (not committed)
 ├── notebooks/
+<<<<<<< HEAD
 │   ├── 01_eda.ipynb                 # Exploratory data analysis
 │   ├── 02_feature_extraction.ipynb  # Feature engineering (produces features.csv)
 │   ├── 03_classification.ipynb      # Model training and evaluation
 │   └── 04_xai.ipynb                 # SHAP explainability and site data export
 ├── website/                         # React research showcase site
+=======
+│   ├── 01_eda.ipynb                # Exploratory data analysis
+│   ├── 02_feature_extraction.ipynb # Feature engineering (produces features.csv)
+│   ├── 03_classification.ipynb     # Model training and evaluation
+│   └── 04_xai.ipynb                # SHAP explainability and site data export
+├── website/                        # React research showcase site
+>>>>>>> 4082ceb71d7ac40a3822599e96dfef71e5786873
 ├── requirements.txt
 └── README.md
-```
+​```
 
 ---
 
@@ -129,7 +138,7 @@ adhd-eeg-classification/
    - `01_eda.ipynb` — exploratory analysis (~3 minutes)
    - `02_feature_extraction.ipynb` — produces `features.csv` (~3 minutes)
    - `03_classification.ipynb` — model training and evaluation (~1 minute)
-
+6. **Run `04_xai.ipynb`** — computes SHAP values, generates topographic maps, exports `site_data.json` for the website
 ---
 
 ## Limitations
